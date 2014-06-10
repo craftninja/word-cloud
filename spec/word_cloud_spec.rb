@@ -3,7 +3,7 @@ require 'json'
 
 describe "WordCloud" do
   it 'allows user to get a list of words with counts and person saying words' do
-    json_data = '{"person1": ["cat", "dog", "pony"], "person2": ["cat cat", "dog", "bunny cat"]}'
+    json_data = '{"person1": ["cat", "dog", "pony"], "person2": ["CAT cat", "dog", "bunny cat"]}'
     data = JSON.parse(json_data)
     word_cloud = WordCloud.new(data)
     actual = word_cloud.count

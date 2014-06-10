@@ -11,6 +11,7 @@ class WordCloud
       phrases.each do |phrase|
         words = phrase.split(/ /)
         words.each do |word|
+          word = word.downcase
           count[word] = {:count => 0, :people => []}
         end
       end
@@ -19,6 +20,7 @@ class WordCloud
       phrases.each do |phrase|
         words = phrase.split(/ /)
         words.each do |word|
+          word = word.downcase
           count[word][:count] += 1
           count[word][:people] << person
           count[word][:people].uniq!
